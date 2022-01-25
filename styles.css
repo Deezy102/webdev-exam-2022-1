@@ -10,6 +10,9 @@
     height: 400px;
     object-fit: cover;
 }
+.img-card {
+    width: 80%;
+}
 .call-to-action {
     background-color: #fbbbbd;
     color: #663399;
@@ -20,9 +23,23 @@ header {
 .heading-line {
     height: 3px;
     width: 80%;
-    background-color: #ffd15c;
+    background-color: #663399;
+}
+.heading-line2 {
+    height: 3px;
+    width: 80%;
+    background-color: #663399;
+}
+.heading-line3 {
+    height: 3px;
+    width: 80%;
+    background-color: #c9a0dc;
 }
 .carousel-caption {
     color: #663399;
-    background-color: #c9a0dccc;
+    background-color: #b2bccacc;
+}
+.footer {
+    background-color:  #c9a0dc;
+    color: #663399;
 }

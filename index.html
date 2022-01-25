@@ -74,8 +74,8 @@
                         aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button> -->
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -118,12 +118,368 @@
                 <h2 class="mb-3">Служба доставки еды</h2>
                 <div class="heading-line mx-auto"></div>
                 <p class="my-3 fs-5">
-                    Нечем угостить нежданно нагрянувших гостей? Нет желания, сил или времени готовить? Нужен обед в офис? 
+                    Нечем угостить нежданно нагрянувших гостей? Нет желания, сил или времени готовить? Нужен обед в
+                    офис?
                     Не беда – на помощь придет Новая Служба Доставки.
                 </p>
+                <div class="row row-cols-3">
+                    <div class="col-4">
+                        <img src="images/tasty.png" class="img-fluid" width="128" alt="">
+                        <h2>Вкусно!</h2>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/decrease.png" class="img-fluid" width="128" alt="">
+                        <h2>Дешево!</h2>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/clock.png" class="img-fluid" width="128" alt="">
+                        <h2>Быстро!</h2>
+                    </div>
+                    <!-- <div class="col-4"></div>
+                    <div class="col-4"></div> -->
+                </div>
+            </div>
+        </section>
+        <section id="restaurant" class="py-5">
+            <h2 class="text-center"> Выбор предприятия общественного питания</h2>
+            <div class="heading-line2 mx-auto mb-3"></div>
+            <form class="border rounded container ">
+                <div class="row mt-2">
+                    <div class="col-lg-6 ">
+                        <label class="form-label" for="district">Административный округ</label>
+                        <select id="district" class="form-select form-select-sm" aria-label=".form-select-sm example"
+                            aria-placeholder="Выберите округ">
+                            <option selected>Не задано</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="form-label" for="area">Район</label>
+                        <select id="area" class="form-select form-select-sm" aria-label=".form-select-sm example"
+                            aria-placeholder="Выберите округ">
+                            <option selected>Не задано</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label class="form-label" for="type">Тип</label>
+                                <select id="type" class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example" aria-placeholder="Выберите округ">
+                                    <option selected>Не задано</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 ">
+                                <label class="form-label" for="discount">Соц. скидки</label>
+                                <select id="discount" class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example" aria-placeholder="Выберите округ">
+                                    <option selected>Не задано</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex mt-3 align-bottom justify-content-end w-50 h-85">
+                        <button type="button" class="btn btn-primary">Найти</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table table-striped table-hover table-bordered rounded container mt-2">
+                <thead>
+                    <tr>
+                        <th scope="col">Название</th>
+                        <th scope="col">Тип</th>
+                        <th scope="col">Адрес</th>
+                        <th scope="col" class="d-flex justify-content-center">Действие</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">...</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td class="d-flex justify-content-center"><button type="button"
+                                class="btn btn-primary">Выбрать</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="container d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heading-line2 mx-auto"></div>
+        </section>
+        <section id="menu" class="container">
+            <h2 class="text-center"> Меню</h2>
+            <div class="heading-line3 mx-auto mb-3"></div>
+            <div class="album py-5 bg-light">
+                <div class="container">
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 1. Десерт</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/healthy-food.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 2. Завтрак</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/healthy-food.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 3. Завтрак</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 4. Обед</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 5. Обед</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 6. Десерт</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/healthy-food.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 7. Завтрак</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 8. Обед</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 9. Обед</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container w-50">
+                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> Сет 10. Десерт</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                                            <p class="mt-2 mx-2">0</p>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                        </div>
+                                        <p class="fs-3">300 рублей</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heading-line3 mx-auto mb-3"></div>
+        </section>
+        <section id="options" class="container mt-2">
+            <h2 class="text-center"> Дополнительные опции</h2>
+            <div class="heading-line mx-auto mb-3"></div>
+            <div class="d-flex justify-content-start ps-5">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="x2">
+                    <label class="form-check-label" for="x2">
+                        В два раза больше!
+                    </label>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-start ps-5 mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="cold">
+                    <label class="form-check-label" for="cold">
+                        Только горячим
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section id="total" class="container border border-3">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                    <p class="mt-2 fs-3">Итого: <span>0</span> руб.</p>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary">Оформить заказ</button>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer text-center py-4 text-muted border-top mt-3" id="contacts">
+        <h5>ООО &laquo;Служба доставки еды&raquo;</h5>
+        <div class="row fs-4">
+            <div class="col-lg-4">
+                <a class="text-decoration-none" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-envelope" viewbox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                    </svg>
+                    email@email.com
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a class="text-decoration-none" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-link-45deg" viewbox="0 0 16 16">
+                        <path
+                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                        <path
+                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+                    </svg>
+                    fast-delivery.ru
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a class="text-decoration-none" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-facebook" viewbox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
