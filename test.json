@@ -1,0 +1,30 @@
+[
+    {
+        "address": "город Москва, проспект Вернадского, дом 125",
+        "admArea": "Западный административный округ",
+        "created_at": "2022-01-09T20:09:11",
+        "district": "район Тропарёво-Никулино",
+        "id": 19700,
+        "isNetObject": false,
+        "name": "Кафе «ТЕАТР НА ЮГО-ЗАПАДЕ»",
+        "operatingCompany": null,
+        "publicPhone": "(495) 434-11-91",
+        "rate": 33,
+        "seatsCount": 20,
+        "set_1": 708,
+        "set_10": 276,
+        "set_2": 609,
+        "set_3": 352,
+        "set_4": 147,
+        "set_5": 905,
+        "set_6": 714,
+        "set_7": 993,
+        "set_8": 498,
+        "set_9": 619,
+        "socialDiscount": 82,
+        "socialPrivileges": false,
+        "student_id": null,
+        "typeObject": "кафе",
+        "updated_at": "2022-01-09T20:09:11"
+    }
+]
