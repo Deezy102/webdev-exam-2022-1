@@ -42,9 +42,9 @@ function renderCafeElement(cafeList, page=1) {
     let tableBody = document.getElementById('table-body');
     tableBody.innerHTML = '';
 
-    console.log(cafeList.length);
+    
     for (let i = page * 20 - 20; i < page * 20; i++) {
-        console.log(i)
+    
         if (cafeList.length <= i) continue;
         let newCafeElement = document.getElementById('row-template').cloneNode(true);
         newCafeElement.querySelector('.cafe-name').innerHTML = cafeList[i].name;
@@ -100,9 +100,16 @@ function pagination() {
     let buttons = document.querySelectorAll(".page-link");
 
     for (let i = 1; i <= 3; i++) {
+        if (buttons[i].classList.contains('d-none')) {
+            buttons[i].classList.remove('d-none');
+        }
         buttons[i].innerHTML = i;
         buttons[i].dataset.page = i;
+        if (i > Math.ceil(filteredDb.length / 20)) {
+            buttons[i].classList.add('d-none');
+        }
     }
+
 
 }
 function pageBtnHandler(event) {
@@ -148,7 +155,7 @@ function pageBtnHandler(event) {
 function findBtnHandler(event) {
     filteredDb = []
     let form = event.target.closest('form');
-
+    console.log('find');
     for (let i of db) {
         if ((form.elements['admArea'].value == 'Не задано' || 
             form.elements['admArea'].value == i.admArea) &&
@@ -164,9 +171,35 @@ function findBtnHandler(event) {
     pagination();
     renderCafeElement(filteredDb, 1);
     
-    
-    
 }
+
+function getCafeByAddress(address){
+    return db.filter(
+        function(db) {
+            return db.address == address
+        }
+    );
+}
+
+function choiceBtnHandler(event) {
+    let address = event.target.closest('tr').querySelector('.cafe-address');
+
+    console.log(address);
+
+    let cafe = getCafeByAddress(address.innerHTML);
+    document.querySelector(`#set-1`).innerHTML = cafe[0].set_1;
+    document.querySelector(`#set-2`).innerHTML = cafe[0].set_2;
+    document.querySelector(`#set-3`).innerHTML = cafe[0].set_3;
+    document.querySelector(`#set-4`).innerHTML = cafe[0].set_4;
+    document.querySelector(`#set-5`).innerHTML = cafe[0].set_5;
+    document.querySelector(`#set-6`).innerHTML = cafe[0].set_6;
+    document.querySelector(`#set-7`).innerHTML = cafe[0].set_7;
+    document.querySelector(`#set-8`).innerHTML = cafe[0].set_8;
+    document.querySelector(`#set-9`).innerHTML = cafe[0].set_9;
+    document.querySelector(`#set-10`).innerHTML = cafe[0].set_10;
+
+}
+
 function showAlert(msg, category='alert-danger') {
     let alertsContainer = document.querySelector('.alerts');
     let newAlertElement = document.getElementById('alerts-template').cloneNode(true);
@@ -186,4 +219,5 @@ window.onload = function () {
 
     document.querySelector('.pagination').onclick = pageBtnHandler;
     document.querySelector('#btn-find').onclick = findBtnHandler;
+    document.querySelector('#btn-choice').onclick = choiceBtnHandler;
 }
