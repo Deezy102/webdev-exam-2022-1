@@ -101,7 +101,7 @@ function renderFilterElement(list, type) {
 }
 
 async function getMenuList() {
-    let url = new URL('http://get-menu.std-1678.ist.mospolytech.ru/menu.json');
+    let url = new URL('http://webdev-exam-2022-1.std-1678.ist.mospolytech.ru/menu.json');
     let response = await fetch(url);
     let json = await response.json();
 
@@ -352,7 +352,7 @@ function minusBtnHandler(event) {
 
 function doubling(event) {
     let double = document.getElementById('x2');
-    
+
     if (double.checked == true) {
         if (double.classList.contains('pass') == false) {
             console.log('doubling');
@@ -408,14 +408,23 @@ function doubling(event) {
 
 }
 
-function cold(flag) {
+function cold() {
     let cold = document.getElementById('cold');
     if (cold.checked == true) {
-        if (flag) {
+        if (document.getElementById('plug').classList.contains('d-none') != true) {
             document.getElementById('plug').classList.add('d-none');
         }
         document.getElementById('modal-cold').closest('li').classList.remove('d-none');
+        if (document.getElementById('modal-total').innerHTML == '...') {
+            let sumArr = document.querySelectorAll('.sub-total');
+            let totalMain = 0;
+            for (let i of sumArr) {
+                totalMain += Number(i.innerHTML);
+            }
 
+            document.getElementById('modal-total').innerHTML = totalMain + 300;
+            document.getElementById('main-total').querySelector('span').innerHTML = totalMain + 300;
+        }
 
         document.getElementById('modal-cold').innerHTML
             = (Number(document.getElementById('modal-total').innerHTML) * 0.7).toFixed(2);
@@ -423,7 +432,7 @@ function cold(flag) {
 }
 
 function orderBtnHandler(event) {
-    cold(flag);
+    cold();
 }
 
 function showAlert(msg, category = 'alert-danger') {

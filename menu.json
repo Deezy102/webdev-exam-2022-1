@@ -1,0 +1,63 @@
+[
+    {
+        "id": "set_1",
+        "name": "Сет 1. Десерт",
+        "type": "pie",
+        "src": "images/pie.png"
+    },
+    {
+        "id": "set_2",
+        "name": "Сет 2. Завтрак",
+        "type": "healthy",
+        "src": "images/healthy-food.png"
+    },
+    {
+        "id": "set_3",
+        "name": "Сет 3. Завтрак",
+        "type": "healthy",
+        "src": "images/healthy-food.png"
+    },
+    {
+        "id": "set_4",
+        "name": "Сет 4. Обед",
+        "type": "meat",
+        "src": "images/meat.png"
+    },
+    {
+        "id": "set_5",
+        "name": "Сет 5. Обед",
+        "type": "meat",
+        "src": "images/meat.png"
+    },
+    {
+        "id": "set_6",
+        "name": "Сет 6. Десерт",
+        "type": "pie",
+        "src": "images/pie.png"
+    },
+    {
+        "id": "set_7",
+        "name": "Сет 7. Завтрак",
+        "type": "healthy",
+        "src": "images/healthy-food.png"
+    },
+    {
+        "id": "set_8",
+        "name": "Сет 8. Обед",
+        "type": "meat",
+        "src": "images/meat.png"
+    },
+    {
+        "id": "set_9",
+        "name": "Сет 9. Обед",
+        "type": "meat",
+        "src": "images/meat.png"
+    },
+    {
+        "id": "set_10",
+        "name": "Сет 10. Десерт",
+        "type": "pie",
+        "src": "images/pie.png"
+    }
+
+]
