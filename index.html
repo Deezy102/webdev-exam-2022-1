@@ -222,205 +222,33 @@
             <div class="heading-line3 mx-auto mb-3"></div>
             <div class="album py-5 bg-light">
                 <div class="container">
-
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="row menu-container row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <div class="col menu-unit d-none">
                             <div class="card shadow-sm">
                                 <div class="container w-50">
-                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
+                                    <img src="images/pie.png" class="img-fluid mt-2 pie d-none" alt="">
+                                    <img src="images/meat.png" class="img-fluid mt-2 meat d-none" alt="">
+                                    <img src="images/healthy-food.png" class="img-fluid healthy mt-2 d-none" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"> Сет 1. Десерт</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                                    <p class="card-text">///</p>
+                                    
+                                    <div class="card-bottom d-flex justify-content-between align-items-center">
+                                        <div class="counters d-flex justify-content-start">
+                                            <button class="btn minus btn-sm btn-outline-secondary">-</button>
+                                            <input type="number" name="counter" value="0" class="counter form-control w-25 text-center">
+                                            <button class="btn plus btn-sm btn-outline-secondary">+</button>
                                         </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-1">300</strong> рублей</span>
+                                        <!-- <div class="btn-group pe-5">
+                                            <button type="button" class="btn btn-sm minus btn-outline-secondary">-</button>
+                
+                                            <input type="number" name="counter" value="0"  class=" w-25 text-center">
+                                            
+                                            <button type="button" class="btn plus btn-sm btn-outline-secondary">+</button>
+                                        </div> -->
+                                        <span class="fs-lg-3 fs-md-4"><strong>300</strong> рублей</span>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 1. Десерт</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-1">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/healthy-food.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 2. Завтрак</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-2">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/healthy-food.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 3. Завтрак</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-3">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 4. Обед</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-4">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 5. Обед</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-5">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 6. Десерт</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-6">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/healthy-food.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 7. Завтрак</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-7">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 8. Обед</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-8">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/meat.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 9. Обед</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-9">300</strong> рублей</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="container w-50">
-                                    <img src="images/pie.png" class="img-fluid mt-2" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> Сет 10. Десерт</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                                            <p class="mt-2 mx-2">0</p>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                                        </div>
-                                        <span class="fs-lg-3 fs-md-4"><strong id="set-10">300</strong> рублей</span>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -470,26 +298,31 @@
                     </div>
                     <div class="modal-body">
                         <h4>Позиции заказа</h4>
-                        <div class="card mb-3 template">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <div>
-                                            <img src="images/meat.png" class="img-fluid rounded-3" alt="" width="64">
+                        <div class="order-container">
+                            <div class="card mb-3 modal-set-template d-none">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex flex-row align-items-center">
+                                            <div>
+                                                <img src="images/pie.png" class="img-fluid pie rounded-3 d-none" alt="" width="64">
+                                                <img src="images/meat.png" class="img-fluid meat rounded-3 d-none" alt="" width="64">
+                                                <img src="images/healthy-food.png" class="img-fluid healthy rounded-3 d-none" alt="" width="64">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="modal-set-name"></h5>
+                                            </div>
                                         </div>
-                                        <div class="ms-3">
-                                            <h5 id="modal-set"></h5>
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="fw-normal mb-0"><span class="set-price"></span>x<span class="set-number"></span>&#8381;</h5>
                                         </div>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <h5 class="fw-normal mb-0">&#8381;</h5>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <h5 class="mb-0">&#8381;</h5>
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="mb-0"><strong class="sub-total"></strong> &#8381;</h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <h4>Дополнительные опции</h4>
                         <ul class="list-unstyled">
                             <li class="d-flex justify-content-between">
@@ -524,7 +357,7 @@
                                     <p>Административный округ:</p>
                                 </div>
                                 <div>
-                                    <p id="modal-district"></p>
+                                    <p id="modal-admArea"></p>
                                 </div>
                             </li>
                             <li class="d-flex justify-content-between">
@@ -532,7 +365,7 @@
                                     <p>Район:</p>
                                 </div>
                                 <div>
-                                    <p id="modal-area"></p>
+                                    <p id="modal-district"></p>
                                 </div>
                             </li>
                             <li class="d-flex justify-content-between">
