@@ -273,11 +273,40 @@ function choiceBtnHandler(event) {
     document.getElementById('options').classList.remove('d-none');
     document.getElementById('main-total').classList.remove('d-none');
 
+    recalculation();
 
 }
 
 function recalculation() {
-    
+    let orderList = document.querySelectorAll('.sub-total');
+    let total = 0;
+    console.log(orderList);
+    for (let i of orderList) {
+        let setID = (i.closest('.modal-card-body')).id.substr(6);
+        if (setID == '') {
+            continue;
+        }
+        let price = document.querySelector(`#${setID}`).innerHTML;
+        document.querySelector(`#modal-${setID}`).querySelector('.set-price').innerHTML = price;
+        document.querySelector(`#modal-${setID}`).querySelector('.sub-total').innerHTML 
+            =  Number(document.querySelector(`#modal-${setID}`).querySelector('.set-number').innerHTML) * price;
+        // totalMain += Number(i.innerHTML);
+    }
+    orderList = document.querySelectorAll('.sub-total');
+    console.log(orderList);
+    for (let i of orderList) {
+        total += Number(i.innerHTML);
+    }
+    if (document.getElementById('x2').checked == true) {
+        total = (total / 2 * 1.6).toFixed(2);
+    }
+    if (document.getElementById('cold').checked == true) {
+        document.querySelector('#modal-cold').innerHTML = (total * 0.7 + 300).toFixed(2);
+    }
+
+    document.querySelector('#modal-total').innerHTML = Number(total) + 300;
+    document.querySelector('#main-total').querySelector('span').innerHTML = Number(total) + 300;
+
 }
 
 function getSetById(setId) {
@@ -412,6 +441,11 @@ function doubling(event) {
 
         document.getElementById('modal-total').innerHTML = totalMain + 300;
         document.getElementById('main-total').querySelector('span').innerHTML = totalMain + 300;
+
+        if (document.getElementById('x2').classList.contains('pass')) {
+            document.getElementById('modal-x2').closest('li').classList.add('d-none');
+            document.getElementById('x2').classList.remove('pass');
+        }
         return flag;
     }
 
@@ -420,23 +454,34 @@ function doubling(event) {
 function cold() {
     let cold = document.getElementById('cold');
     if (cold.checked == true) {
-        if (document.getElementById('plug').classList.contains('d-none') != true) {
-            document.getElementById('plug').classList.add('d-none');
-        }
-        document.getElementById('modal-cold').closest('li').classList.remove('d-none');
-        if (document.getElementById('modal-total').innerHTML == '...') {
-            let sumArr = document.querySelectorAll('.sub-total');
-            let totalMain = 0;
-            for (let i of sumArr) {
-                totalMain += Number(i.innerHTML);
+        if (cold.classList.contains('pass') == false) { 
+            if (document.getElementById('plug').classList.contains('d-none') != true) {
+                document.getElementById('plug').classList.add('d-none');
             }
+            document.getElementById('modal-cold').closest('li').classList.remove('d-none');
+            if (document.getElementById('modal-total').innerHTML == '...') {
+                let sumArr = document.querySelectorAll('.sub-total');
+                let totalMain = 0;
+                for (let i of sumArr) {
+                    totalMain += Number(i.innerHTML);
+                }
+    
+                document.getElementById('modal-total').innerHTML = totalMain + 300;
+                document.getElementById('main-total').querySelector('span').innerHTML = totalMain + 300;
+            }
+    
+            document.getElementById('modal-cold').innerHTML
+                = (Number(document.getElementById('modal-total').innerHTML) * 0.7).toFixed(2);
 
-            document.getElementById('modal-total').innerHTML = totalMain + 300;
-            document.getElementById('main-total').querySelector('span').innerHTML = totalMain + 300;
+            document.getElementById('cold').classList.add('pass');
         }
-
-        document.getElementById('modal-cold').innerHTML
-            = (Number(document.getElementById('modal-total').innerHTML) * 0.7).toFixed(2);
+        
+    }
+    else {
+        if (document.getElementById('cold').classList.contains('pass')) {
+            document.getElementById('modal-cold').closest('li').classList.add('d-none');
+            document.getElementById('cold').classList.remove('pass');
+        }
     }
 }
 
