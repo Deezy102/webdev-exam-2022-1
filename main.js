@@ -250,8 +250,8 @@ function getCafeById(id) {
 function choiceBtnHandler(event) {
     let id = event.target.closest('tr').id;
 
-
     let cafe = getCafeById(id);
+
     document.querySelector(`#set_1`).innerHTML = cafe[0].set_1;
     document.querySelector(`#set_2`).innerHTML = cafe[0].set_2;
     document.querySelector(`#set_3`).innerHTML = cafe[0].set_3;
@@ -274,6 +274,10 @@ function choiceBtnHandler(event) {
     document.getElementById('main-total').classList.remove('d-none');
 
 
+}
+
+function recalculation() {
+    
 }
 
 function getSetById(setId) {
@@ -319,7 +323,12 @@ function plusBtnHandler(event) {
         totalMain += Number(i.innerHTML);
     }
 
-    document.getElementById('main-total').querySelector('span').innerHTML = totalMain;
+    // if (document.getElementById('x2').classList.contains('pass')) {
+    //     document.getElementById('x2').classList.remove('pass');
+    //     document.getElementById('x2').checked = false;
+    // }
+    document.getElementById('main-total').querySelector('span').innerHTML = totalMain + 300;
+    document.getElementById('modal-total').innerHTML = totalMain + 300;
 }
 
 function minusBtnHandler(event) {
@@ -356,7 +365,7 @@ function doubling(event) {
     if (double.checked == true) {
         if (double.classList.contains('pass') == false) {
             console.log('doubling');
-            double.setAttribute('checked', 'cheked');
+            double.setAttribute('checked', '');
             document.getElementById('plug').classList.add('d-none');
             let flag = false;
             let setArr = document.querySelectorAll('.modal-card-body');
@@ -433,6 +442,7 @@ function cold() {
 
 function orderBtnHandler(event) {
     cold();
+
 }
 
 function showAlert(msg, category = 'alert-danger') {
@@ -475,7 +485,7 @@ window.onload = function () {
     document.querySelector('.pagination').onclick = pageBtnHandler;
     document.querySelector('#btn-find').onclick = findBtnHandler;
     document.querySelector('#btn-choice').onclick = choiceBtnHandler;
-    document.querySelector('#x2').onclick = doubling;
+    document.querySelector('#x2').onchange = doubling;
     // document.querySelector('#cold').onclick = coldHandler;
     document.querySelector('#order').onclick = orderBtnHandler;
     // document.querySelector('.plus').onclick = plusBtnHandler;
